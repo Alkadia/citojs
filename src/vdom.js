@@ -251,7 +251,9 @@
                     case 'math': ns = 'http://www.w3.org/1998/Math/MathML'; break;
                     default: ns = parentNs; break;
                 }
-
+                
+                if(node.ns) ns = node.ns;
+                
                 var attrs = node.attrs,
                     is = attrs && attrs.is;
                 if (ns) {
